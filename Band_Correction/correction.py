@@ -3,12 +3,12 @@
 import numpy as np
 from copy import deepcopy
 
-exp_directory = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/MapIR/MC Tests/MC Test 4'
+exp_directory = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/Mavic/MC Tests/MC Test 4'
 
-single_1 = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/MapIR/AC Summer 23/Wheat Field/6-8/raw/081.RAW'
-single_2 = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/MapIR/MC Tests/MC Test 4/RAW/850.RAW'
+single_1 = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/Mavic/AC Summer 23/Wheat Field/6-8/raw/081.RAW'
+single_2 = '/Users/KevMcK/Dropbox/2 Work/1 Optics Lab/2 Imaging/Data/Mavic/MC Tests/MC Test 4/RAW/850.RAW'
 
-# Function to apply correction to MapIR Object
+# Function to apply correction to Mavic Object
 def band_correction(mapir_object, corr_values=None):
     if corr_values is None:
         # Monochromator Exp 4 Values from paper

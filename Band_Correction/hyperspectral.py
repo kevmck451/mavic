@@ -50,7 +50,7 @@ def mapir_graph_mapir():
         image.reduce_bands(bands=(490,880))
         image.graph_all_mapir_pika(display=False, save=False)
 
-    plt.title(f'MC Test: Pika like MapIR')
+    plt.title(f'MC Test: Pika like Mavic')
     plt.show()
 
 # Function to graph all files from Monochromator
@@ -105,11 +105,11 @@ def pika_to_mapir():
     plt.plot(x_values, green, color='r', linewidth=2, label='Red Values')
     plt.plot(x_values, red, color='g', linewidth=2, label='Green Values')
     plt.plot(x_values, nir,color='b', linewidth=2, label='NIR Values')
-    plt.vlines(x=[550, 650, 850], ymin=0, ymax=255, colors='black', ls='--', lw=1, label='MapIR Bands')
+    plt.vlines(x=[550, 650, 850], ymin=0, ymax=255, colors='black', ls='--', lw=1, label='Mavic Bands')
     plt.xlabel('Bands')
     plt.ylabel('Counts')
     # plt.xticks([x for x in range(500, 900, 25)])
-    plt.title(f'MC Test: Pika like MapIR')
+    plt.title(f'MC Test: Pika like Mavic')
     plt.legend(loc='upper left')
     plt.show()
 
@@ -285,7 +285,7 @@ def mapir_cor_max(display, save):
         plt.show()
 
     if save:
-        saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Projects/MapIR/Autosaves/Pika-Corrected Max Values Dict.txt')
+        saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Projects/Mavic/Autosaves/Pika-Corrected Max Values Dict.txt')
         with open(saveas, 'w') as f:
             for x,y in max_dict.items():
                 line = f'{str(y)} : {str(x)}\n'
@@ -310,7 +310,7 @@ def mapir_cor_av(display, save):
         plt.show()
 
     if save:
-        saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Projects/MapIR/Autosaves/Pika-Corrected Mean Values Dict.txt')
+        saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Projects/Mavic/Autosaves/Pika-Corrected Mean Values Dict.txt')
         with open(saveas, 'w') as f:
             for x,y in max_dict.items():
                 line = f'{str(y)} : {str(x)}\n'
@@ -919,7 +919,7 @@ class Hyperspectral:
         plt.title(f'MC: {self.file_name} / Pika: {pika_band}nm')
 
         if save:
-            saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 MapIR/Autosaves/{self.file_name}-Graph')
+            saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Mavic/Autosaves/{self.file_name}-Graph')
             plt.savefig(saveas)
             plt.close()
         if display:
@@ -967,7 +967,7 @@ class Hyperspectral:
         # plt.title(f'MC: {self.file_name} / Pika: {pika_band}nm')
 
         if save:
-            saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 MapIR/Autosaves/{self.file_name}-Graph')
+            saveas = (f'../../Dropbox/2 Work/1 Optics Lab/2 Mavic/Autosaves/{self.file_name}-Graph')
             plt.savefig(saveas)
             plt.close()
         if display:
@@ -1021,7 +1021,7 @@ class Hyperspectral:
 
         return diff
 
-    # Function to display synthesized MapIR Image
+    # Function to display synthesized Mavic Image
     def display_Mapir_Single(self, display, save=False):
         # print(self.wavelengths_dict)
         # 525 - 575 or 550
@@ -1085,7 +1085,7 @@ class Hyperspectral:
             plt.axis('off')
             plt.show()
 
-    # Function to display synthesized MapIR Image
+    # Function to display synthesized Mavic Image
     def display_Mapir_Range(self, display, save=False):
         # print(self.wavelengths_dict)
         # 525 - 575 or 550

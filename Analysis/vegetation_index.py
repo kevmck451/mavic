@@ -5,7 +5,7 @@ import numpy as np
 
 # Function to calculate and display the Normalized Difference Vegetation Index
 def NDVI(mapir_object, display=True, save=False):
-    NIR = mapir_object.data[:, :, mapir_object.NIR_index]
+    NIR = mapir_object.data[:, :, mapir_object.B_index]
     RED = mapir_object.data[:, :, mapir_object.R_index]
 
     RED, NIR = RED.astype('float'), NIR.astype('float')
@@ -31,9 +31,11 @@ def NDVI(mapir_object, display=True, save=False):
     if display:
         plt.show()
 
+    return ndvi_array
+
 # Function to calculate and display the Green Normalized Difference Vegetation Index
 def GNDVI(mapir_object, display=True, save=False):
-    NIR = mapir_object.data[:, :, mapir_object.NIR_index]
+    NIR = mapir_object.data[:, :, mapir_object.B_index]
     GREEN = mapir_object.data[:, :, mapir_object.G_index]
 
     GREEN, NIR = GREEN.astype('float'), NIR.astype('float')
@@ -64,7 +66,7 @@ def NDVI_area_values(mapir_object, corr, middle_pixel):
         if corr: name = 'Corrected'
         else: name = 'Original'
 
-        NIR = mapir_object.data[:, :, mapir_object.NIR_index]
+        NIR = mapir_object.data[:, :, mapir_object.B_index]
         RED = mapir_object.data[:, :, mapir_object.R_index]
 
         RED, NIR = RED.astype('float'), NIR.astype('float')

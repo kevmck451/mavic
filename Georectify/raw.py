@@ -1,4 +1,4 @@
-# MapIR RAW Processing
+# Mavic RAW Processing
 # Kevin McKenzie 2023
 
 import matplotlib.pyplot as plt
@@ -10,7 +10,7 @@ import piexif
 import cv2
 import os
 
-# MapIR class to process_single RAW images
+# Mavic class to process_single RAW images
 class MapIR_RAW:
     def __init__(self, raw_file_path):
         self.file_path = raw_file_path
@@ -23,7 +23,7 @@ class MapIR_RAW:
             # print(self.data)
 
         # ----------------- UNPACK RAW DATA --------------------
-        # Function to unpack MapIR raw image file per-pixel 12 bit values
+        # Function to unpack Mavic raw image file per-pixel 12 bit values
         try:
             # unpack a mapir raw image file into per-pixel 12 bit values
             # print(len(self.data))

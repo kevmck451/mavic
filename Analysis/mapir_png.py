@@ -1,4 +1,4 @@
-# MapIR Georectified Image Processing
+# Mavic Georectified Image Processing
 # Kevin McKenzie 2023
 
 import matplotlib.pyplot as plt
@@ -6,7 +6,7 @@ from pathlib import Path
 import imageio.v2 as iio
 import numpy as np
 
-# MapIR class to analyze georectified images type png
+# Mavic class to analyze georectified images type png
 class MapIR_png:
     def __init__(self, raw_file_path):
 

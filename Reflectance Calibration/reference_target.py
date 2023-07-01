@@ -5,9 +5,9 @@ from raw import MapIR_RAW
 from pathlib import Path
 from reflectance_cal import *
 
-# base_directory = '../Data/MapIR/AC Summer 23/Wheat Field/6-8'
-base_directory = '../Data/MapIR/AC Summer 23/Wheat Field/6-20'
-# base_directory = '../Data/MapIR/AC Summer 23/Main Sub Field/6-20'
+# base_directory = '../Data/Mavic/AC Summer 23/Wheat Field/6-8'
+base_directory = '../Data/Mavic/AC Summer 23/Wheat Field/6-20'
+# base_directory = '../Data/Mavic/AC Summer 23/Main Sub Field/6-20'
 
 bd = Path(base_directory)
 
